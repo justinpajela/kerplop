@@ -53,11 +53,7 @@ public abstract class GamePiece implements Drawable {
 	 * @return
 	 */
 	public abstract InteractionResult interact(Drawable [] gameBoard, int playerLocation);
-
-	/**
-	 * 
-	 * @return piece's current location on board
-	 */
+		
 	public int getLocation() {
 		return location;
 	}
