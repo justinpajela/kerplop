@@ -34,7 +34,7 @@ public abstract class GamePiece implements Drawable {
 		this.location = location;
 	}
 
-	/**
+	/**x
 	 * Draws the pieces symbol on the board
 	 * 
 	 * Abstract classes can have concrete/defined methods

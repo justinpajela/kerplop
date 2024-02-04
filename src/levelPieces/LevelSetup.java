@@ -10,14 +10,16 @@ public class LevelSetup {
 	private Drawable[] board;
 	private ArrayList<Moveable> moveablePieces;
 	private ArrayList<GamePiece> interactivePieces;
-	private int playerStartLocation;
+	private int playerStartLocation=9;
 	private Drawable Board[] = new Drawable[20];
+	private Player player;
  	public LevelSetup( ) {
 		moveablePieces = new ArrayList<>();
 		interactivePieces = new ArrayList<>();
+		player = new Player(playerStartLocation);
 	}
 	public void createLevel(int levelNum) {
-		board = new Drawable[21];
+		board = new Drawable[20];
 		moveablePieces.clear();
 		interactivePieces.clear();
 		if (levelNum == 1) {
@@ -54,12 +56,16 @@ public class LevelSetup {
 		return playerStartLocation;
 	}
 	public void levelOne() {
-		Player player = new Player(17);
-		Giant giant = new Giant(2);
-		board[player.getLocation()] = player;
+		Giant giant = new Giant(5);
+		PotOfGold pg = new PotOfGold(12); 
+		PotOfGold pg2 = new PotOfGold(1); 
 		board[giant.getLocation()] = giant;
-		moveablePieces.add(giant);
-		
+		board[pg.getLocation()] = pg;
+		board[pg2.getLocation()] = pg2;
+		interactivePieces.add(pg);
+		interactivePieces.add(pg2);
+ 		moveablePieces.add(giant);
+		interactivePieces.add(giant);
 	}
 	public void levelTwo() {
 		Giant giant = new Giant(5);

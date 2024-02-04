@@ -4,12 +4,10 @@ import gameEngine.Drawable;
 import gameEngine.GameEngine;
 import gameEngine.InteractionResult;
 import gameEngine.Moveable;
-
+import java.util.Random; 
 public class Giant extends GamePiece implements Moveable{
-	private char symbol = 'G';
-	private int location;
 	private int turn = 0;
-	private String label;
+	private boolean movingRight = true; 
 	public Giant(int location) {
 	    super('G', "Giant", location);
 	}
@@ -26,47 +24,30 @@ public class Giant extends GamePiece implements Moveable{
 	 * @param playerLocation
 	 * @return
 	 */
-	public InteractionResult interact(Drawable [] gameBoard, int playerLocation) {
-		if (Math.abs(this.getLocation() - playerLocation) < 2) {
-			return InteractionResult.KILL;
-		}
-		return InteractionResult.NONE;
-	}
-	/**
-	 * 
-	 * @return piece's current location on board
-	 */
-	public int getLocation() {
-		return location;
-	}
-	public void move(Drawable[] gameBoard, int playerLocation) {
-		
-	}
-	
-	
-	/**
-	 * @param newLocation - location to place piece
-	 */
-	public void setLocation(int newLocation) {
-		// Ensure the location remains on the board
-		if (newLocation >= 0 && newLocation < GameEngine.BOARD_SIZE)
-			location = newLocation;
-	}
-	
-	@Override
-	public String toString() {
-		return symbol + " - " + label ; 
-	}
-	private int updateGiantLocation() {
-		int giantLocation = location;
-		if (turn % 2 == 0 ) {
-			if (giantLocation > 0) {
-				giantLocation = location - 2;
-			}
-			else if(location < GameEngine.BOARD_SIZE - 1) { 
-				giantLocation = location + 2; 
-			}
-		}
-		return giantLocation;
-	}
+	 public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
+	        // Kills only if on the same location as the player
+	        if (this.getLocation() == playerLocation) {
+	            return InteractionResult.KILL;
+	        }
+	        return InteractionResult.NONE;
+	    }
+
+	    @Override
+	    public void move(Drawable[] gameBoard, int playerLocation) {
+	        turn++; 
+	        if (turn % 2 == 0) {
+	            if (movingRight && getLocation() == GameEngine.BOARD_SIZE - 2) { 
+	                movingRight = false;
+	            } else if (!movingRight && getLocation() == 0) {
+	                movingRight = true;
+	            }
+	            int nextLocation = movingRight ? getLocation() + 1 : getLocation() - 1;
+	            if ((nextLocation >= 0 && nextLocation < GameEngine.BOARD_SIZE) && gameBoard[nextLocation] == null) {
+	                gameBoard[getLocation()] = null; 
+	                setLocation(nextLocation); 
+	                gameBoard[getLocation()] = this; 
+	            }
+	        }
+	    }
+
 }
