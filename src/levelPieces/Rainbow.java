@@ -2,6 +2,7 @@ package levelPieces;
 
 import gameEngine.Drawable;
 import gameEngine.InteractionResult;
+
 public class Rainbow extends GamePiece{
 
 	public Rainbow(int location) {

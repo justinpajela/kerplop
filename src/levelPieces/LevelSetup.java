@@ -69,10 +69,13 @@ public class LevelSetup {
 		board[leprechaun.getLocation()] = leprechaun;
 		board[witch.getLocation()] = witch;
 		
-		
+		interactivePieces.add(witch);
+		interactivePieces.add(leprechaun);
 		interactivePieces.add(pg);
 		interactivePieces.add(pg2);
  		moveablePieces.add(giant);
+ 		moveablePieces.add(witch);
+ 		moveablePieces.add(leprechaun);
 		interactivePieces.add(giant);
 	}
 	
