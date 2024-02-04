@@ -60,10 +60,16 @@ public class LevelSetup {
 		PotOfGold pg = new PotOfGold(12); 
 		PotOfGold pg2 = new PotOfGold(1); 
 		Rainbow r1 = new Rainbow (8);
+		Leprechaun leprechaun = new Leprechaun(15);
+		Witch witch = new Witch(17);
 		board[giant.getLocation()] = giant;
 		board[pg.getLocation()] = pg;
 		board[pg2.getLocation()] = pg2;
 		board[r1.getLocation()] = r1;
+		board[leprechaun.getLocation()] = leprechaun;
+		board[witch.getLocation()] = witch;
+		
+		
 		interactivePieces.add(pg);
 		interactivePieces.add(pg2);
  		moveablePieces.add(giant);

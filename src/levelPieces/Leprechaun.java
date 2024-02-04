@@ -8,7 +8,7 @@ public class Leprechaun extends GamePiece implements Moveable{
 	// leprechaun jumps around the map
 	private Boolean moveRight = true;
 	
-	public Leprechaun(char symbol, String label, int location) {
+	public Leprechaun(int location) {
 		super('L', "Leprechaun", location);
 		
 	}
