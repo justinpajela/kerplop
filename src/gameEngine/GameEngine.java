@@ -179,11 +179,13 @@ public class GameEngine {
 	 * InteractionResult.KILL).
 	 */
 	public void interaction() {
+		ArrayList<GamePiece> itemsRemove = new ArrayList<>();
 		for (GamePiece piece : interactingPieces) {
 			InteractionResult result = piece.interact(gameBoard, player.getLocation());
 			if (result == InteractionResult.GET_POINT) {
 				player.addPoint();
 				System.out.println("\nYou just won a prize!\n");
+				itemsRemove.add(piece);
 			}
 			if (result == InteractionResult.HIT) {
 				player.takeDamage();
@@ -206,6 +208,10 @@ public class GameEngine {
 				// can only advance once
 				break;
 			}
+		}
+		for (GamePiece piece : itemsRemove) {
+			interactingPieces.remove(piece); 
+			gameBoard[piece.getLocation()] = null;
 		}
 	}
 

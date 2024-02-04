@@ -67,6 +67,7 @@ public class LevelSetup {
  		moveablePieces.add(giant);
 		interactivePieces.add(giant);
 	}
+	
 	public void levelTwo() {
 		Giant giant = new Giant(5);
 	}

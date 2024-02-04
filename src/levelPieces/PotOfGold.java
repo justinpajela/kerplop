@@ -19,6 +19,7 @@ public class PotOfGold extends GamePiece implements Moveable{
 	@Override
 	public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
 		if (playerLocation == getLocation()) {
+			
 			return InteractionResult.GET_POINT;
 		}
 		return InteractionResult.NONE;
