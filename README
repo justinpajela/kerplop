@@ -1,0 +1,7 @@
+Authors: Justin Pajela and Brody Perlick
+LevelSetup contains creating the levels and setting the board as well as the character assembly per level
+Witch is a character that hits within two spaces and moves randomly throughout the board
+Giant is a character that slowly patrols the map and if on the same space kills
+Rainbow is the object that does nothing
+PotOfGold is what gets one point
+Leprechaun will advance to the next level

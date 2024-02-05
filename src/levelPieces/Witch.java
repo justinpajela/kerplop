@@ -43,7 +43,7 @@ public class Witch extends GamePiece implements Moveable{
 		Random rand = new Random();
 		int teleport = rand.nextInt(20);
 		
-		if (teleport < 20 && gameBoard[teleport] == null) {
+		if (teleport < 19 && gameBoard[teleport] == null) {
 			gameBoard[getLocation()] = null;				// reset the board spot
 			setLocation(teleport);							
 			gameBoard[getLocation()] = this;				//new location

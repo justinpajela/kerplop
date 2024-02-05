@@ -1,0 +1,71 @@
+commit 9325974f5ed6150f1172c97f1b936d769a6f5143
+Author: Brody Perlick <brodyperlick@mines.edu>
+Date:   Sun Feb 4 17:09:40 2024 -0700
+
+    Level 2 and comment tops
+
+commit 2b3ce6f76c95569045fa7a2d34b81cf4df5527d8
+Author: Justin Pajela <justin@Justins-MacBook-Air-3.local>
+Date:   Sun Feb 4 16:52:23 2024 -0700
+
+    level one
+
+commit c18b82214e4bfa7a0aaa75abfac166c21b3a748e
+Author: Brody Perlick <brodyperlick@mines.edu>
+Date:   Sun Feb 4 16:31:11 2024 -0700
+
+    Leprechaun and LevelSetup
+
+commit 177c71b61ead1a93d54aa8c0a45fa3f180d0f321
+Author: Brody Perlick <brodyperlick@mines.edu>
+Date:   Sun Feb 4 16:17:53 2024 -0700
+
+    Added leprechaun and witch classes
+
+commit a2091c2d32da248b864438b80aa83f1eb48260b1
+Author: Justin Pajela <justin@Justins-MacBook-Air-3.local>
+Date:   Sun Feb 4 15:28:58 2024 -0700
+
+    rainbow
+
+commit ca6f1cda0f1149161438c974c038d0e60917442e
+Author: Justin Pajela <justin@Justins-MacBook-Air-3.local>
+Date:   Sun Feb 4 15:11:10 2024 -0700
+
+    added functionality to get rid of pot of gold when picked up
+
+commit 017583df4bca060c9542c544c8be8566696504cb
+Author: Justin Pajela <justin@Justins-MacBook-Air-3.local>
+Date:   Sun Feb 4 14:56:13 2024 -0700
+
+    giant of pot of gold
+
+commit e9aea5a2ad3436199483fff69e4dfc7dd95cbb52
+Author: Justin Pajela <justin@Justins-MacBook-Air-3.local>
+Date:   Sun Feb 4 13:25:03 2024 -0700
+
+    giant
+
+commit f438514662bb9bb7c95adf80d511b1ca65e27cc6
+Author: Brody Perlick <brodyperlick@mines.edu>
+Date:   Fri Feb 2 17:16:56 2024 -0700
+
+    worked on the level setup class
+
+commit 3293a175cdd1987e779d9ad794d92551274780bf
+Author: Justin Pajela <justin@Justins-MacBook-Air-3.local>
+Date:   Fri Feb 2 16:53:05 2024 -0700
+
+    worked on one piece class and the levelsetup class
+
+commit e628c2be75e83a4924897b9ee333b07d0f91d11a
+Author: Justin Pajela <justin@Justins-MacBook-Air-3.local>
+Date:   Fri Feb 2 12:24:39 2024 -0700
+
+    I Brody Perlick worked equitably on this project,
+
+commit f4f45947c4a2a77ac3c4429c935441e34b146783
+Author: Justin Pajela <justin@Justins-MacBook-Air-3.local>
+Date:   Fri Feb 2 12:16:54 2024 -0700
+
+    I, Justin Pajela worked equitably on this project,

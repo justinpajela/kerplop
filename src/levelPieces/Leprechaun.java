@@ -35,31 +35,33 @@ public class Leprechaun extends GamePiece implements Moveable{
 
 	@Override
 	public void move(Drawable[] gameBoard, int playerLocation) {
-		// can only be set to odd numbers in the level setup
+		
+		
 		if (moveRight && getLocation() == 19) {
 			moveRight = false;
-		} else if (!moveRight && getLocation() == 1) {
+		} else if (!moveRight && getLocation() == 0) {
 			moveRight = true;
 		}
 		
-		
-		if ((moveRight) && (getLocation()+2 < 20) && (gameBoard[getLocation()+2] == null)) {
-			gameBoard[getLocation()] = null;
-			setLocation(getLocation()+2);
-			gameBoard[getLocation()] = this;
-		} else if ((!moveRight) && (getLocation()-2 > 0) && (gameBoard[getLocation()-2] == null)){
-			gameBoard[getLocation()] = null;
-			setLocation(getLocation()-1);
-			gameBoard[getLocation()] = this;
-		} else if((gameBoard[getLocation()+2] != null) &&  gameBoard[getLocation()+1] == null) {
+		// intent of this block is to get the leprechaun to go back and forth and jump where it can
+		if ((moveRight) && (getLocation()+1 < 20) && (gameBoard[getLocation()+1] == null)) {
 			gameBoard[getLocation()] = null;
 			setLocation(getLocation()+1);
 			gameBoard[getLocation()] = this;
-		} else if((gameBoard[getLocation()-2] != null) && gameBoard[getLocation()-1] == null) {
+		} else if ((!moveRight) && (getLocation()-1 > 0) && (gameBoard[getLocation()-1] == null)){
+			gameBoard[getLocation()] = null;
+			setLocation(getLocation()-1);
+			gameBoard[getLocation()] = this;
+		} else if((gameBoard[getLocation()+1] != null) && (getLocation()+2 < 20) && (gameBoard[getLocation()+2] == null)) {
+			gameBoard[getLocation()] = null;
+			setLocation(getLocation()+2);
+			gameBoard[getLocation()] = this;
+		} else if((gameBoard[getLocation()-1] != null) && (getLocation()-2 >= 0) && (gameBoard[getLocation()-2] == null)) {
 			gameBoard[getLocation()] = null;
 			setLocation(getLocation()-2);
 			gameBoard[getLocation()] = this;
 		}
+		
 		
 	}
 
