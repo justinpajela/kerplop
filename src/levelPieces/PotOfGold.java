@@ -1,3 +1,10 @@
+/*
+ * 
+ * Authors: Justin Pajela and Brody Perlick
+ * Date:February 4, 2024
+ * Collaborators: None
+ * Outside Sources: None
+ */
 package levelPieces;
 
 import gameEngine.Drawable;

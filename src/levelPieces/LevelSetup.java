@@ -1,3 +1,10 @@
+/*
+ * 
+ * Authors: Justin Pajela and Brody Perlick
+ * Date:February 4, 2024
+ * Collaborators: None
+ * Outside Sources: None
+ */
 package levelPieces;
 import gameEngine.Moveable;
 import gameEngine.Player;
@@ -57,12 +64,14 @@ public class LevelSetup {
 	}
 	public void levelOne() {
 		Giant giant = new Giant(5);
+		Giant giant1 = new Giant(0);
 		PotOfGold pg = new PotOfGold(12); 
 		PotOfGold pg2 = new PotOfGold(1); 
 		Rainbow r1 = new Rainbow (8);
 		Leprechaun leprechaun = new Leprechaun(15);
 		Witch witch = new Witch(17);
 		board[giant.getLocation()] = giant;
+		board[giant1.getLocation()] = giant1;
 		board[pg.getLocation()] = pg;
 		board[pg2.getLocation()] = pg2;
 		board[r1.getLocation()] = r1;
@@ -77,10 +86,34 @@ public class LevelSetup {
  		moveablePieces.add(witch);
  		moveablePieces.add(leprechaun);
 		interactivePieces.add(giant);
+		moveablePieces.add(giant1);
+		interactivePieces.add(giant1);
 	}
 	
 	public void levelTwo() {
 		Giant giant = new Giant(5);
+		PotOfGold pg = new PotOfGold(2); 
+		PotOfGold pg2 = new PotOfGold(18); 
+		Rainbow r1 = new Rainbow (8);
+		Rainbow r2 = new Rainbow (14);
+		Leprechaun leprechaun = new Leprechaun(1);
+		Witch witch = new Witch(17);
+		board[giant.getLocation()] = giant;
+		board[pg.getLocation()] = pg;
+		board[pg2.getLocation()] = pg2;
+		board[r1.getLocation()] = r1;
+		board[r2.getLocation()] = r2;
+		board[leprechaun.getLocation()] = leprechaun;
+		board[witch.getLocation()] = witch;
+		
+		interactivePieces.add(witch);
+		interactivePieces.add(leprechaun);
+		interactivePieces.add(pg);
+		interactivePieces.add(pg2);
+ 		moveablePieces.add(giant);
+ 		moveablePieces.add(witch);
+ 		moveablePieces.add(leprechaun);
+		interactivePieces.add(giant);
 	}
 
 }
