@@ -1,4 +1,4 @@
-/*
+/*Leprechaun class contains interaction result and movement for the leprechaun on the board
  * 
  * Authors: Justin Pajela and Brody Perlick
  * Date:February 4, 2024

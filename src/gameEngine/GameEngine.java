@@ -179,6 +179,7 @@ public class GameEngine {
 	 * InteractionResult.KILL).
 	 */
 	public void interaction() {
+		//list that adds items to be removed, or the pot of gold when picked up
 		ArrayList<GamePiece> itemsRemove = new ArrayList<>();
 		for (GamePiece piece : interactingPieces) {
 			InteractionResult result = piece.interact(gameBoard, player.getLocation());
@@ -209,6 +210,7 @@ public class GameEngine {
 				break;
 			}
 		}
+		//once the pot of gold is picked up, it removes it from the list and the map
 		for (GamePiece piece : itemsRemove) {
 			interactingPieces.remove(piece); 
 			gameBoard[piece.getLocation()] = null;

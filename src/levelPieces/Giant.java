@@ -1,4 +1,5 @@
-/*
+/*Giant class: contains a giant class that moves around the map evry other turn. 
+ * The giant kills on one hit
  * 
  * Authors: Justin Pajela and Brody Perlick
  * Date:February 4, 2024

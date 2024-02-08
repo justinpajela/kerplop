@@ -1,4 +1,5 @@
-/*
+/*Rainbow class: rainbow class contains the drawable piece that has no interaction with the player but exists on the board.
+ * 
  * 
  * Authors: Justin Pajela and Brody Perlick
  * Date:February 4, 2024

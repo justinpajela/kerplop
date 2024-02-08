@@ -1,4 +1,5 @@
-/*
+/*PotOfGold class: contains the point interaction. Everytime
+ * a player lands on a pot of gold they receive one point
  * 
  * Authors: Justin Pajela and Brody Perlick
  * Date:February 4, 2024

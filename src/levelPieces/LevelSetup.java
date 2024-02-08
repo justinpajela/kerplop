@@ -1,4 +1,5 @@
-/*
+/*LevelSetup class contains all of the setup of the board and the levels by palcing the 
+ * pieces and creating what moves and what interacts. 
  * 
  * Authors: Justin Pajela and Brody Perlick
  * Date:February 4, 2024
